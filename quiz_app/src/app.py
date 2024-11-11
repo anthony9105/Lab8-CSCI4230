@@ -11,6 +11,7 @@ from src.config import Config
 from src.database import db  # Import db from database module
 from src.controllers.quiz_controller import quiz_bp
 
+
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
@@ -26,6 +27,7 @@ def create_app():
         db.create_all()
 
     return app
+
 
 if __name__ == "__main__":
     app = create_app()
